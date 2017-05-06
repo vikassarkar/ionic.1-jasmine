@@ -1,0 +1,26 @@
+<ion-view view-title="My Account">
+    <ion-content class="padding-top">
+        <div class="app-container">
+            <div class="account-container" ng-if="accountData !== 'error' && !showLoader">
+                <div class="row app-account-header">
+                    <span class="app-account-id">Account#{{accountId}}</span>
+                    <div class="app-account-views">
+                        <span class="app-list-link" ng-click="toggleView('list')" ng-class="{'active-view': accountListView}" test-attr="app_account_list_view"><i class="ion-ios-list-outline"></i></span>
+                        <span class="app-thumb-link" ng-click="toggleView('thumbnail')" ng-class="{'active-view': !accountListView}" test-attr="app_account_thumb_view"><i class="ion-ios-keypad"></i></span>
+                    </div>
+                </div>
+
+                <div ng-include src="'modules/account/views/accountThumbnailView.html'" ng-if="!accountListView"></div>
+                <div ng-include src="'modules/account/views/accountListView.html'" ng-if="accountListView"></div>
+
+                <!-- footer directive -->
+                 <div app-footer></div>
+            </div>
+        </div>
+        <!-- error directive -->
+        <div app-error class="error-container"  ng-if="accountData === 'error' && !showLoader"></div>
+        <!-- Loader directive -->
+        <div app-loading ng-if="showLoader"></div>
+        
+    </ion-content>
+</ion-view>

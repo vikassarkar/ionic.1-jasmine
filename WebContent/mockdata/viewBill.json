@@ -1,0 +1,27 @@
+{
+  "userDetails": {
+    "Balance": "134.45",
+    "DueDate": "3, Dec",
+    "FromDate": "1, Oct 2015",
+    "ToDate": "1, Nov 2015",
+    "Currency": "$"
+  },
+  "subscribers": [
+    {
+      "Name": "John Bernard",
+      "Balance": "41.00"
+    },
+    {
+      "Name": "Dilen Bernard",
+      "Balance": "64.05"
+    },
+    {
+      "Name": "Donna Bernard",
+      "Balance": "16.10"
+    },
+    {
+      "Name": "Amenda Bernard",
+      "Balance": "13.30"
+    }
+  ]
+}

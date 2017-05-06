@@ -1,0 +1,36 @@
+<ion-view view-title="View Bill">
+    <ion-content class="padding-top">
+        <div class="view-bill-container">
+            <div class="app-container" ng-if="userBalanceSummary !== 'error' && !showLoader">
+                <div class="row app-balance-summary" >
+                    <!-- user balance summary directive -->
+                    <div app-user-balance-summary data="userBalanceSummary"></div>
+                    <div class="app-bill-pay">
+                        <div><label>From: </label><span ng-bind=" userBalanceSummary.FromDate"></span></div>
+                        <div><label>To: </label><span ng-bind=" userBalanceSummary.ToDate"></span></div>
+                        <button class="button button-calm" test-attr="app_btn_pay_now">
+                            Pay Now
+                        </button>
+                    </div>
+                </div>
+                <div class="row app-bill-view">
+                    <a href="#" ui-sref="app.billHistory" test-attr="app_bill_history">
+                        <img src="common/assets/images/arrorw.png" /><span>Bill History</span>
+                    </a>
+                </div>
+                <div doughnut donutdata="dataDonut" class="donut-position"></div>
+                <!-- advertisement directive -->
+                <div style="padding: 0" app-advertisement></div>
+                <!-- footer directive -->
+                <div app-footer></div>
+            </div>
+            <!-- error directive -->
+            <div app-error class="error-container"  ng-if="userBalanceSummary === 'error' && !showLoader"></div>
+            <!-- Loader directive -->
+            <div app-loading ng-if="showLoader"></div>
+        </div>
+    </ion-content>
+</ion-view>
+<script>
+
+</script>

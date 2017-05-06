@@ -1,0 +1,65 @@
+<ion-view view-title="Hello {{userBalanceSummary.Name}}" hide-back-button="true">
+    <ion-content class="padding-top">
+        <div class="home-container">
+            <div class="app-container" ng-if="userBalanceSummary !== 'error' && !showLoader">
+                <div class="row app-balance-summary">
+                    <!-- user balance summary directive -->
+                    <div app-user-balance-summary data="userBalanceSummary"></div>
+                    <div class="app-plan">
+                        <span class="app-plan-type" ng-bind="userBalanceSummary.Plan"></span>
+                    </div>
+                </div>
+                <div class="row app-bill-history">
+                    <a href="#" test-attr="app_last_payment_link">
+                        <img src="common/assets/images/arrorw.png" /><span>Last payment</span></a>
+                </div>
+                <div class="row app-bills-sec">
+                    <div class="col app-shape-container">
+                        <div class="app-bill-links">
+                            <ul>
+                                <li class="app-view-bill" test-attr="app_view_bill">
+                                    <a ui-sref="app.viewBill" >View Bill </a>
+                                </li>
+                                <li class="app-pay-bill">
+                                    <a ui-sref="app.billHistory" test-attr="app_pay_now">Pay Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row app-icon-sec">
+                    <ul class="col app-icon-list list">
+                        <li>
+                            <a href="#">
+                                <img src="modules/home/assets/images/my-account.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="modules/home/assets/images/support.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="modules/home/assets/images/bill-history.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="modules/home/assets/images/roaming.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- advertisement directive -->
+                <div app-advertisement></div>
+                <!-- footer directive -->
+                <div app-footer></div>
+            </div>
+            <!-- error directive -->
+            <div app-error class="error-container"  ng-if="userBalanceSummary === 'error' && !showLoader"></div>
+            <!-- Loader directive -->
+            <div app-loading ng-if="showLoader"></div>
+        </div>
+    </ion-content>
+</ion-view>

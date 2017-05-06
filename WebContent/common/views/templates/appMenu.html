@@ -1,0 +1,32 @@
+<div class='menu-modal'>
+    <div class='menu-overlay' ng-click='hideMenu()'></div>
+    <div class="menu-dialog-container">
+        <div class="menu-dialog">
+            <div class="menu-content">
+                <div class="menu-header">
+                    <button type="button" class="menu-close" ng-click='hideMenu()' aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="menu-body">
+                    <ul class="list">
+                        <li>
+                            <a class="menu-link" ui-sref="app.home" ng-click='hideMenu()' test-attr="app_home_link">Home</a>
+                        </li>
+                        <li>
+                            <a class="menu-link" ui-sref="app.viewBill" ng-click='hideMenu()' test-attr="app_viewbill_link">View Bill</a>
+                        </li>
+                        <li>
+                            <a class="menu-link" ui-sref="app.billHistory" ng-click='hideMenu()' test-attr="app_billhistory_link">Bill History</a>
+                        </li>
+                        <li>
+                            <a class="menu-link" ui-sref="app.account" ng-click='hideMenu()' test-attr="app_account_link">My Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

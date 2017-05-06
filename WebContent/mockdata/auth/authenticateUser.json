@@ -1,0 +1,16 @@
+{
+    "userDetails": {
+        "userName1": {
+            "email":"vikas.sarkar2014@gmail.com",
+            "password":"12345"
+        },
+        "userName2": {
+            "email":"vikas.sarkar@gmail.com",
+            "password":"12121"
+        },
+        "userName3": {
+            "email":"vikas.sarkar22@gmail.com",
+            "password":"11111"
+        }
+    }
+}

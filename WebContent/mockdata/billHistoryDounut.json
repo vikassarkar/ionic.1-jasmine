@@ -1,0 +1,22 @@
+{
+  "Balance": "155.23",
+  "Currency": "$",
+  "Subscribers": [
+    {
+      "Name": "John Bernard",
+      "Balance": "55.00"
+    },
+    {
+      "Name": "Dilen Bernard",
+      "Balance": "34.23"
+    },
+    {
+      "Name": "Donna Bernard",
+      "Balance": "38.00"
+    },
+    {
+      "Name": "Amenda Bernard",
+      "Balance": "28.00"
+    }
+  ]
+}

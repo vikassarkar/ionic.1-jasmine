@@ -1,0 +1,90 @@
+//**************************************************************************************//
+//										account-styles									//
+//**************************************************************************************//
+ion-content {
+	.app-container{
+		.account-container{
+			.app-account-owner{
+				color: $app_color-theme-grey-1;
+			}
+			.app-account-number{
+				color: $app_color-theme-blue;
+				font-size: 2.3rem;
+    			padding: 1rem 0 1.3rem;
+                border-bottom: 0.07rem solid $app_color-theme-grey-4;
+			}
+			.app-account-header{
+				    border-bottom: 0.1rem solid $app_color-theme-grey-1;
+				    display: table;
+				    font-size: 1.25rem;
+				    padding-bottom: 0.5rem;
+				    font-weight: lighter;
+                    color:$app_color-theme-grey-1;
+				.app-account-views{
+					float: right;
+                    display: table;
+					span{
+						cursor: pointer;
+					}
+					.app-list-link{
+						margin-right: 0.6rem;
+					}
+					.active-view{
+						color: $app_color-theme-blue;
+					}
+				}
+			}
+			.app-list-view{
+				display: table;
+				margin-top: 1.5rem;
+				.app-list-table{
+					width: 100%;
+					margin-bottom: 2rem;
+					.app-list-block{
+						.app-item-block{
+							border-bottom: 0.07rem solid $app_color-theme-grey-4;
+							padding: 0.6rem 0;
+							.item-left{
+								&.item-left-light{
+									color: $app_color-theme-grey-1;
+								}
+							}
+							.item-right{
+								float: right;
+								color: $app_color-theme-yellow;
+							}
+						}
+					}
+				}
+			}
+			.app-thumb-view{
+				display: table;
+				margin-top: 1.5rem;
+				.app-thumb-table{
+					margin-bottom: 2rem;
+					.app-thumb-block{
+						.app-item-block{
+							text-align: center;
+							.item-top{
+								&.item-top-left{
+									margin: 0.6rem 0.5rem 0 0;
+								}
+								&.item-top-center{ 
+									margin: 0.6rem 0.25rem 0;
+								}
+								&.item-top-right{
+									margin: 0.6rem 0 0 0.5rem;
+								}
+							}
+							.item-bottom{
+								font-size: 1.15rem;
+							    font-weight: lighter;
+							    padding: 0.2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

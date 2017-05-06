@@ -1,0 +1,14 @@
+<div class="app-error-wrapper">
+    <div class="app-error-outer" ng-if="error !== 'inner'">
+        <img src="common/assets/images/error.png" />
+        <h4>This Page cannot be loaded !</h4>
+        <div ng-if="!errorMssg">There is an error in page.</div>
+        <div ng-if="errorMssg" ng-bind="errorMssg"></div>
+    </div>
+    <div class="app-error-inner" ng-if="error === 'inner'">
+        <img src="common/assets/images/error.png" height="50" width="50"/>
+        <div>This Section cannot be loaded !</div>
+        <div ng-if="!errorMssg">There is an error in this section.</div>
+        <div ng-if="errorMssg" ng-bind="errorMssg"></div>
+    </div>
+</div>

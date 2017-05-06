@@ -1,0 +1,17 @@
+{
+  "MonthWithBalance": [
+    {
+      "Month": "Jun",
+      "Balance": "123.98"
+    },
+    {
+      "Month": "Jul",
+      "Balance": "76.54"
+    },
+    {
+      "Month": "Aug",
+      "Balance": "155.23"
+    }
+  ]
+}
+

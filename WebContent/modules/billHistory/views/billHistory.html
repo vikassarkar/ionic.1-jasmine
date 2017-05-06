@@ -1,0 +1,45 @@
+<ion-view view-title="Bill History">
+    <ion-content class="padding-top">
+        <div class="bill-history-container" ng-if="barData !== 'error' && dataDonut !== 'error' && !showOuterLoader">
+            <div class="app-container">
+            <div ng-if="barData !== 'error' && !showBarLoader">
+                <div class="app-graph-bar-ctrl" >
+                    <div bar bardata={{barData}} month="selectedMonth"></div>
+                </div>
+            </div>
+            <!-- error directive for bar graphs-->
+            <div app-error error="'inner'" class="error-container" ng-if="barData === 'error' && !showBarLoader"></div>
+            <!-- Loader directive for bar graphs-->
+            <div app-loading loader="'inner'" class="app-barLoader" ng-if="showBarLoader"></div>
+                </div>
+            <div class="calendar">
+                <div class="left-arrow" ng-click="leftCal()" ng-disabled="arrowLeft" test-attr="app_previous_month_data"></div>
+                <div class="month">
+                    <p ng-bi>{{currMonth}}</p>
+                </div>
+                <div class="right-arrow" ng-click="rightCal()" ng-disabled="arrowRight" test-attr="app_next_month_data"></div>
+            </div>
+            <div class="app-container">
+            <div ng-if="dataDonut !== 'error' && !showDonutLoader">
+                <div doughnut donutdata="dataDonut" class="donut-position"></div>
+            </div>
+            <!-- error directive for donut charts-->
+            <div app-error error="'inner'" class="error-container" ng-if="barData === 'error' && !showDonutLoader"></div>
+            <!-- Loader directive for donut charts-->
+            <div app-loading loader="'inner'" class="app-DonutLoader" ng-if="showDonutLoader"></div>
+            <!-- advertisement directive -->
+            <div app-advertisement></div>
+            <!-- footer directive -->
+            <div app-footer></div>
+                </div>
+        </div>
+        <!-- error directive -->
+        <div app-error class="error-container" ng-if="barData === 'error' || dataDonut === 'error' && !showOuterLoader && showOuterError"></div>
+        <!-- Loader directive -->
+        <div app-loading ng-if="showOuterLoader"></div>
+        </div>
+    </ion-content>
+</ion-view>
+<script>
+
+</script>

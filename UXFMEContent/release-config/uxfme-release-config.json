@@ -1,0 +1,16 @@
+{
+    "applicationid": "KC1MobileApp",
+    "url": "http://uxfme-stg-93.streamezzo.lan:8087/daappsmgrconsole/adm/rest",
+    "account": {
+        "login": "digitalservices",
+        "password": "digitalservices"
+    },
+    "installers": [
+        "KC1MobileApp.apk"
+    ],
+    "options": {
+        "force": true,
+        "active": true,
+        "mandatory": true        
+    }
+}

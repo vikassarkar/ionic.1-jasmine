@@ -1,0 +1,73 @@
+ion-content {
+	.home-container {
+		.app-container{
+			.app-balance-summary{
+				border-bottom: 0.1rem solid $app_color-theme-grey-1;
+			}
+			.app-plan {
+			    width: 40%;
+			    text-align: right;
+			    padding: 2rem 0 0;
+			    border-left: 0.1rem solid $app_color-theme-grey-1;
+                color: $app_color-theme-grey-1;
+			}
+			.app-bill-history {
+				font-size: 0.75rem;
+                padding: 0.1rem 0;
+                margin-bottom: 1.4rem;
+				a {
+					color: $app_color-white;
+					text-decoration: none;
+				  img {
+					height: 0.7rem;
+					margin: .9rem .5rem 0 0;
+				  }
+				}
+			}
+			.app-bills-sec {
+				.app-shape-container{
+                    background: no-repeat url("../../../modules/home/assets/images/shape.png");
+				    margin: 0 auto;
+				  height: 12.7rem;
+                    background-size: contain;
+                    background-position: center;
+                    .app-bill-links{
+                        width: 12rem;
+                        margin: 0 auto;
+                        text-align: center;
+                        a {
+                            text-decoration: none;
+                            text-align:center;
+                            font-size: 1.35rem;
+                            color: $app_color-white;
+                            font-weight: lighter;
+                        }
+                        .app-view-bill{
+						  margin-top: 3.0rem;
+                        }
+                        .app-pay-bill{
+						  margin-top: 3.5rem
+                        }
+                    }
+				}
+			}
+			.app-icon-sec {
+				margin-top: 1.5rem;
+				padding: 0 1.5rem;
+				margin-bottom: 10%;
+				text-align: center;
+				.app-icon-list {
+					list-style: none;
+				  img {
+					height: 1.8rem;
+					width: 1.5rem;
+				  }
+					li {
+						display: inline-block;
+						padding: 0 0.7rem;
+					}
+				}
+			}
+		}
+	}
+}

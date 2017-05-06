@@ -1,0 +1,101 @@
+{
+  "configurations": {
+    "Master": {
+      "applicationid": "KC1MobileApp",
+      "toolkitversion": "9.4.0-26.0.6",
+      "debug": true,
+      "autohidesplashscreen": true,
+      "autoupdate": true,
+      "startpage": "index.html",
+      "embeddedfiles": [
+        "WebContent.Master"
+      ],
+      "logposturl": "http://uxfmeqa-datacollect.products.streamezzo.com/datacollect/rest/log/collect",
+      "trackingposturl": "http://uxfmeqa-datacollect.products.streamezzo.com/datacollect/rest/tracking/collect",
+      "pushnotifications": {
+        "enablenotifications": true,
+        "notificationtypes": [
+          "alert",
+          "badge",
+          "sound",
+          "vibrate"
+        ],
+        "enableschemeconfiguration": true,
+        "scheme": "hawk"
+      },
+      "platforms": {
+        "Android": {
+          "applicationname": "KC1MobileApp",
+          "applicationversion": "1.0.0",
+          "packagename": "com.amdocs.digitalservices",
+          "enablesigning": true,
+          "keystore": "Master-platforms-Android-keystore.ks",
+          "keystorepassword": "streamezzo",
+          "alias": "uxfme",
+          "keypassword": "streamezzo",
+          "pushnotificationsenderid": "396040985860",
+          "backgroundcolor": "0x000000",
+          "statusbarhidden": false,
+          "statusbar": {
+            "overlap": false,
+            "style": "default",
+            "backgroundcolor": "default"
+          },
+          "supportedorientations": [
+            "portrait"
+          ],
+          "icons": {
+            "launchericons": {
+              "ldpi": "Master-platforms-Android-icons-launchericons-ldpi.png",
+              "mdpi": "Master-platforms-Android-icons-launchericons-mdpi.png",
+              "hdpi": "Master-platforms-Android-icons-launchericons-hdpi.png",
+              "xhdpi": "Master-platforms-Android-icons-launchericons-xhdpi.png",
+              "xxhdpi": "Master-platforms-Android-icons-launchericons-xxhdpi.png",
+              "xxxhdpi": "Master-platforms-Android-icons-launchericons-xxxhdpi.png"
+            }
+          },
+          "launchimages": {
+            "phone": {
+              "portrait": {
+                "mdpi": "Master-platforms-Android-launchimages-phone-portrait-mdpi.png",
+                "hdpi": "Master-platforms-Android-launchimages-phone-portrait-hdpi.png",
+                "xhdpi": "Master-platforms-Android-launchimages-phone-portrait-xhdpi.png",
+                "xxhdpi": "Master-platforms-Android-launchimages-phone-portrait-xxhdpi.png",
+                "xxxhdpi": "Master-platforms-Android-launchimages-phone-portrait-xxxhdpi.png"
+              }
+            },
+            "tablet": {
+              "portrait": {
+                "mdpi": "Master-platforms-Android-launchimages-tablet-portrait-mdpi.png",
+                "hdpi": "Master-platforms-Android-launchimages-tablet-portrait-hdpi.png",
+                "xhdpi": "Master-platforms-Android-launchimages-tablet-portrait-xhdpi.png"
+              }
+            }
+          },
+          "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CALL_PHONE",
+            "android.permission.CAMERA",
+            "android.permission.GET_ACCOUNTS",
+            "android.permission.GET_TASKS",
+            "android.permission.INTERNET",
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            "android.permission.READ_CALENDAR",
+            "android.permission.READ_CONTACTS",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.RECORD_AUDIO",
+            "android.permission.SEND_SMS",
+            "android.permission.USE_CREDENTIALS",
+            "android.permission.VIBRATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "com.google.android.c2dm.permission.RECEIVE",
+            "com.streamezzo.android.richmedia.permission.C2D_MESSAGE"
+          ]
+        }
+      }
+    }
+  }
+}

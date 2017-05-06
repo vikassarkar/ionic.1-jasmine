@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="vendors/ionic/css/ionic.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="vendors/hawk/hawk.js"></script>
+    <!-- <link href="vendors/material-design-lite/css/ionic.material-design-lite.css" rel="stylesheet" type="text/css"> -->
+    
+    <link href="common/assets/styles/main.css" rel="stylesheet" type="text/css">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>    
+    <!-- load requirejs config -->
+    <script src="main.js"></script>
+    <!-- load requirejs -->
+    <script src="vendors/requirejs/require.js"></script>
+    <!-- load boot-script - it loads configs, routes, runs and bootstraps the app -->
+    <script src="common/js/boot.js"></script>
+</head>
+
+<body>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+</body>
+
+</html>

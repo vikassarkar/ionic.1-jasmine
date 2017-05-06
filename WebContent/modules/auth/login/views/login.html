@@ -1,0 +1,38 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="padding-top">
+        <div class="login-container">
+
+            <div class="row app-login-header">
+                <div class="col col-25 app-login-shape">
+                </div>
+                <div class="col col-75 app-header-text">
+                    <p class="app-welcome-text">Welcome to</p>
+                    <div class=" app-logo"></div>
+                </div>             
+            </div>
+
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" ng-model="user.username" placeholder="Your Mobile" id="app_login_user_text">
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model="user.password" placeholder="Password" id="app_login_pass_text">
+                </label>
+                <label class="item">
+                    <input type="checkbox" id="app_login_remember_chkbox"/>
+                    <span> Remember Me</span>
+                </label>
+            </div>
+            
+            <div class="row responsive-sm responsive-lg app-button-sec">
+                <div class="col">
+                    <button class="button button-calm" ng-click="login(user)" id="app_login_btn">Login</button>
+                </div>                            
+            </div> 
+
+            <div app-footer></div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

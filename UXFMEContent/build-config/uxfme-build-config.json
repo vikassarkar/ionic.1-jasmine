@@ -1,0 +1,11 @@
+{
+  "platformsdirectory": "http://cpgfront.dox.streamezzo.lan/dir/v1",
+  "account": {
+    "login": "digitalservices",
+    "password": "digitalservices"
+  },
+  "deploymentconfiguration": {
+    "buildplatform": "CPG STZ PROD Internal DOX for Build Service",
+    "runtimeplatform": "Staging Runtime Platform"
+  }
+}

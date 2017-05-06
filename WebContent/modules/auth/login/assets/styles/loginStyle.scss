@@ -1,0 +1,120 @@
+ion-content {
+  .login-container {
+    color: $app_color-white;
+
+    .app-login-header {
+      height: 14rem;
+      .app-login-shape{
+        // img {
+        //   width: 3.9rem;
+        // }
+        background: no-repeat url("../../../modules/auth/login/assets/images/shape.png");
+        background-size: contain;
+      }
+      .app-header-text {
+        padding-top: 3rem;
+        @extend %fluid-size;
+
+        p {
+          font-size: 2rem;
+          font-weight: lighter;
+          margin: 0;
+          margin-bottom: 0.4rem;
+          letter-spacing: 0.05rem;
+        }
+        .app-logo{
+            background: no-repeat url("../../../modules/auth/login/assets/images/logo.png");
+            background-size: contain;
+            width: 40%;
+            height: 100%;
+        }
+      }
+    }
+
+    .list:not(.card).list-inset {
+      background-color: $app_background-black-theme;
+      width: 58%;
+      margin: 0 auto;
+      padding-top: 12.5%;
+      margin-bottom: 2.3rem;
+
+      label {
+        background-color: $app_background-black-theme;
+        padding: 0;
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0;
+
+        input {
+          padding: 0 0.5rem 0 0.5rem;
+          color: $app_color-white;
+          height: 2rem;
+        }
+      }
+
+      label:last-child {
+        border: none;
+        font-size: 0.9rem;
+        margin-top: 0.7rem;
+
+        input {
+          padding: 0;
+          height: 0.8rem;
+        }
+
+        span {
+          color: $app_color-theme-grey-1;
+        }
+      }
+    }
+
+    .app-button-sec {
+      text-align: center;
+      margin-bottom: 15%;
+      button {
+        width: 27%;
+        line-height: 1.8rem;
+        border-radius: 0;
+        min-height: 1.9rem;
+        color: #252932;;
+        background-color: $app_color-theme-blue;
+        border: none;
+      }
+    }
+  }
+}
+
+
+
+.popup-container .popup {
+  border-radius: 5px;
+  background-color: #ebebeb;
+  .popup-title {
+    text-align: left;
+  }
+  .popup-buttons {
+    padding-bottom: 0px;
+    padding-top: 0;
+    border-top: 1px solid #acacac;
+    .button {
+      border: none;
+      background: transparent;
+      &:last-child {
+        border-left:1px solid #acacac ;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+   ion-content {
+        .login-container {
+            .app-login-header {
+                height: 20rem;
+            }
+             .app-header-text {
+                padding-top: 10%;
+             }
+        }
+    }
+}

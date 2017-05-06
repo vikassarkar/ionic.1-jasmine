@@ -1,0 +1,29 @@
+{
+    "name": "KC1FrontEnd",
+    "private": true,
+    "description": "KC1FrontEnd used to build android app",
+    "devDependencies": {
+        "karma": "0.13",
+        "jasmine-core": "2.4.1",
+        "karma-jasmine": "0.3.7",
+        "karma-requirejs": "0.2.4",
+        "karma-coverage": "0.5.3",
+        "phantomjs-prebuilt": "2.1.4",
+        "karma-phantomjs-launcher": "1.0.0",
+        "karma-junit-reporter": "0.3.8",
+        "archiver": "0.21.0",
+        "fs-extra": "0.26.5"
+    },
+    "scripts": {
+        "preinstall": "npm install uxfme-buildservice-module.tgz",
+        "test": "karma start karma.conf.js",
+        "package": "node package.js",
+        "clean": "node clean.js",
+        "uxfme-build": "node node_modules/uxfme-buildservice-module/node_modules/nodeunit/bin/nodeunit node_modules/uxfme-buildservice-module/build.js",
+        "rename": "node rename.js",
+        "build": "npm run clean && npm run package && npm run uxfme-build && npm run rename",
+        "uxfme-release": "node node_modules/uxfme-buildservice-module/node_modules/nodeunit/bin/nodeunit node_modules/uxfme-buildservice-module/release.js",
+		"package-release": "node package-release.js",
+		"release": "npm run package-release && npm run uxfme-release"
+    }
+}

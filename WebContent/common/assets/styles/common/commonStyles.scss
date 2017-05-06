@@ -1,0 +1,430 @@
+//**************************************************************************************//
+//										app-utility..move to _utility					//
+//**************************************************************************************//
+.app-container{
+	padding: 0.8rem 1.2rem 0;
+}
+ion-content {
+  background-color: $app_background-black-theme;
+  color:$app_color-white;
+}
+
+//**************************************************************************************//
+//										app-menu										//
+//**************************************************************************************//
+.menu-modal{
+    @extend %hide-section;
+	&.show-element{
+		@extend %show-section;
+	}
+	.menu-overlay {
+	    position: fixed;
+	    z-index: 9999;
+	    top: 0;
+	    left: 0;
+	    @extend %fluid-size;
+	    background-color: $app_color-black;
+	    opacity: 0.1;
+	}
+	.menu-dialog-container {
+	    position: fixed;
+	    z-index: 10000;
+	    top: 0;
+	    right: 0;
+	    width: 50%;
+	    height: 70%;
+	    background-color: transparent;
+	    .menu-dialog {
+		    z-index: 10000;
+		    position: relative;
+		    top: 0;
+		    right: 0;
+		    @extend %fluid-size;
+		    background-color: $app_color-theme-yellow;
+		    animation-name: menuIn;
+		    -webkit-animation-name: menuIn;
+		    animation-duration: 0.3s;
+		    -webkit-animation-duration: 0.3s;
+		    animation-timing-function: ease-in;
+		    -webkit-animation-timing-function: ease-in;
+		    animation-iteration-count: 1;
+		    -webkit-animation-iteration-count: 1;
+		    animation-direction: normal;
+		    -webkit-animation-direction: normal;
+		    animation-delay: 0;
+		    -webkit-animation-delay: 0;
+		    animation-play-state: running;
+		    -webkit-animation-play-state: running;
+		    animation-fill-mode: forwards; 
+		    -webkit-animation-fill-mode: forwards; 
+		    .menu-content {
+			    float: right;
+			    width: 85%;
+			    box-shadow:none;
+                border: none;
+			    .menu-header{
+			    	text-align:right;
+			    	.menu-close{
+				    	background: $app_color-transparent;;
+					    border: none;
+					    font-size: 2.5rem;
+			    	}
+			    }
+			    .menu-body{
+				    a{
+					    text-decoration: none;
+					    font-size: 1.3rem;
+					    color: $app_color-black;
+					    margin-bottom: 1.2rem;
+					    display: table;
+					    &.active-menu{
+					    	font-weight: bold;
+					    }
+				    }
+			    }
+			}
+		}
+		.menu-dialog.out {
+			animation-name: menuOut;
+	      	-webkit-animation-name: menuOut;
+	      	animation-duration: 0.3s;
+	      	-webkit-animation-duration: 0.3s;
+	      	animation-timing-function: ease-out;
+	      	-webkit-animation-timing-function: ease-out;
+	      	animation-iteration-count: 1;
+	      	-webkit-animation-iteration-count: 1;
+	      	animation-direction: normal;
+	      	-webkit-animation-direction: normal;
+	      	animation-delay: 0;
+	      	-webkit-animation-delay: 0;
+	      	animation-play-state: running;
+	      	-webkit-animation-play-state: running;
+	      	animation-fill-mode: forwards; 
+	      	-webkit-animation-fill-mode: forwards; 
+		}
+	}
+}
+
+@keyframes menuIn {
+	0% {
+		right: -100%;
+	}10% {
+		right: -90%;
+	}20% {
+		right: -80%;
+	}30% {
+		right: -70%;
+	}40% {
+		right: -60%;
+	}50% {
+		right: -50%;
+	}60% {
+		right: -40%;
+	}70% {
+		right: -30%;
+	}80% {
+		right: -20%;
+	}90% {
+		right: -10%;
+	}100% {
+		right: 0;
+	}
+}
+@-webkit-keyframes menuIn{
+	0% {
+		right: -100%;
+	}10% {
+		right: -90%;
+	}20% {
+		right: -80%;
+	}30% {
+		right: -70%;
+	}40% {
+		right: -60%;
+	}50% {
+		right: -50%;
+	}60% {
+		right: -40%;
+	}70% {
+		right: -30%;
+	}80% {
+		right: -20%;
+	}90% {
+		right: -10%;
+	}100% {
+		right: 0;
+	}	
+}
+@-webkit-keyframes menuOut{
+	0% {
+		right: 0;
+	}10% {
+		right: -10%;
+	}20% {
+		right: -20%;
+	}30% {
+		right: -30%;
+	}40% {
+		right: -40%;
+	}50% {
+		right: -50%;
+	}60% {
+		right: -60%;
+	}70% {
+		right: -70%;
+	}80% {
+		right: -80%;
+	}90% {
+		right: -90%;
+	}100% {
+		right: -100%;
+	}
+}
+@keyframes menuOut {
+	0% {
+		right: 0;
+	}10% {
+		right: -10%;
+	}20% {
+		right: -20%;
+	}30% {
+		right: -30%;
+	}40% {
+		right: -40%;
+	}50% {
+		right: -50%;
+	}60% {
+		right: -60%;
+	}70% {
+		right: -70%;
+	}80% {
+		right: -80%;
+	}90% {
+		right: -90%;
+	}100% {
+		right: -100%;
+	}
+}
+
+//**************************************************************************************//
+//										app-footer										//
+//**************************************************************************************//
+.app-footer {
+	font-size: 0.5rem;
+	text-align: center;
+	color: $app_color-theme-grey-1;
+}
+
+
+//**************************************************************************************//
+//								app-user-balance-summary								//
+//**************************************************************************************//
+
+	.app-bill-details {
+		overflow: hidden;
+		width: 60%;
+		.app-balance {
+			width: 100%;
+			float: left;
+			font-size: 0.74rem;
+            padding-bottom: 0.3rem;
+			.app-bal-text {
+				width: 50%;
+				float: left;
+                margin-bottom: 1.5rem;
+			}
+			.app-bal-date {
+				width: 50%;
+				float: right;
+				text-align: right;
+				padding-right: 0.6rem;
+                margin-bottom: 1.5rem;
+                color:$app_color-theme-grey-1;
+			}
+			.app-bal-amt {
+				font-size: 2.6rem;
+				color: $app_color-theme-blue;
+			}
+            sup{
+                vertical-align: super;
+                font-size: 1.2rem;
+			  color: $app_color-theme-blue;
+            }
+		}
+	}
+
+//**************************************************************************************//
+//								app-box-percentage-indicator							//
+//**************************************************************************************//
+.app-percentage-indicator{
+	position: relative;
+	&.app-unlimited-box{
+		background-color:transparent;
+		border:0.1rem solid $app_color-theme-yellow;
+		height:100%;
+		.app-usage-display{
+			position: relative;
+			height: 100%;
+			.app-usage-unlimited{
+				top: 38%;
+			    position: relative;
+			    text-align: center;
+			    color: $app_color-theme-yellow;
+			}
+		}
+	}
+	&.app-percentage-box{
+		border:0.1rem solid $app_color-theme-purple-3;
+		height:100%;
+		.app-usage-display{
+			position: relative;
+			height: 100%;
+			.app-usage-percent{
+				position: absolute;
+				right: 0;
+				background-color: $app_color-theme-yellow;
+				width: 50%;
+				padding:0.2rem 0.2rem;
+				text-align: center;
+				color: $app_color-black;
+			}
+			.app-unused-value{
+				width: 100%;
+				background-color: $app_color-theme-purple-3;
+				position:absolute;
+				bottom: 0;
+
+			}
+		}
+	}
+	
+}
+
+//**************************************************************************************//
+//								app-ripple-loader							            //
+//**************************************************************************************//
+.app-loader-outer{
+    margin-top: 25%;
+}
+.app-loader-inner{
+    text-align: center;
+    margin: 20% 0;
+}
+@-webkit-keyframes app-loader-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  33% {
+    width: 44%;
+    height: 44%;
+    margin: -22% 0 0 -22%;
+    opacity: 1;
+  }
+  100% {
+    width: 88%;
+    height: 88%;
+    margin: -44% 0 0 -44%;
+    opacity: 0;
+  }
+}
+@keyframes app-loader-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  33% {
+    width: 44%;
+    height: 44%;
+    margin: -22% 0 0 -22%;
+    opacity: 1;
+  }
+  100% {
+    width: 88%;
+    height: 88%;
+    margin: -44% 0 0 -44%;
+    opacity: 0;
+  }
+}
+.app-ripple-gif {
+  background: none;
+  position: relative;
+  margin: 3rem auto;
+  width: 15.5rem;
+  height: 15.5rem;
+  transform:scale(0.36);
+  -webkit-transform: scale(0.36);
+  -moz-transform: scale(0.36);
+  -o-transform: scale(0.36);
+}
+.app-ripple-gif div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-radius: 50%;
+  border-width: 12px;
+  border-style: solid;
+  -ms-animation: app-loader-ripple 2s ease-out infinite;
+  -moz-animation: app-loader-ripple 2s ease-out infinite;
+  -webkit-animation: app-loader-ripple 2s ease-out infinite;
+  -o-animation: app-loader-ripple 2s ease-out infinite;
+  animation: app-loader-ripple 2s ease-out infinite;
+}
+.app-ripple-gif div:nth-of-type(1) {
+  border-color: $app_color-theme-grey-1;
+}
+.app-ripple-gif div:nth-of-type(2) {
+  border-color: $app_color-theme-blue;
+  -ms-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.bill-analysis {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  left: 50%;
+  top: 39%;
+  transform: translate(-50%, -39%);
+}
+
+
+//**************************************************************************************//
+//								app-error						                        //
+//**************************************************************************************//
+.app-error-outer{
+    text-align: center;
+    img{
+        width: 30%;
+        margin-top: 25%; 
+    }
+    h4{
+        color:$app_color-white;
+    }
+    div{
+        font-size: 1.1rem;
+        margin-top: 1%;
+    }
+}
+.app-error-inner{
+    text-align: center;
+    img{
+        margin-top: 2%; 
+    }
+    div{
+        font-size: 0.7rem;
+        margin-top: 1%;
+    }
+}
